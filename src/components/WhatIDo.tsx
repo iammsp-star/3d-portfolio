@@ -87,20 +87,19 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>AI & AUTOMATION</h3>
-              <h4>Workflow Intelligence for Organizations</h4>
+              <h3>DATA SCIENCE & ML</h3>
+              <h4>Predictive Modeling & Insights</h4>
               <p>
-                AI specialist helping organizations automate workflows—internal ops
-                and customer-facing—so teams ship faster with less manual work.
+                I leverage statistical techniques and machine learning algorithms to uncover insights from data and build predictive models that drive decision-making.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">LLMs &amp; agents</div>
-                <div className="what-tags">Workflow design</div>
-                <div className="what-tags">RAG &amp; retrieval</div>
-                <div className="what-tags">Evals &amp; guardrails</div>
-                <div className="what-tags">Integrations</div>
-                <div className="what-tags">Product strategy</div>
+                <div className="what-tags">Python</div>
+                <div className="what-tags">SQL</div>
+                <div className="what-tags">NumPy & Pandas</div>
+                <div className="what-tags">Scikit-Learn</div>
+                <div className="what-tags">Data Visualization</div>
+                <div className="what-tags">Statistical Modeling</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -124,21 +123,19 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>BUILD &amp; SCALE</h3>
-              <h4>Shipping AI in Production</h4>
+              <h3>AI & RESEARCH</h3>
+              <h4>Scalable Intelligent Systems</h4>
               <p>
-                I build the systems behind it: APIs, data, voice/real-time, and
-                full-stack products—production-ready, not slide decks.
+                I am deep-diving into Deep Learning architectures and foundational ML principles to build scalable, intelligent systems for the future.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Python</div>
-                <div className="what-tags">REST &amp; real-time APIs</div>
-                <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Cloud &amp; infra</div>
+                <div className="what-tags">Neural Networks</div>
+                <div className="what-tags">Linear Algebra</div>
+                <div className="what-tags">Calculus</div>
+                <div className="what-tags">Deep Learning History</div>
+                <div className="what-tags">Git & GitHub</div>
+                <div className="what-tags">Research & Design</div>
               </div>
               <div className="what-arrow"></div>
             </div>

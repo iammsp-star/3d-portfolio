@@ -5,32 +5,18 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "CallHQ",
-    category: "Voice AI Calling Platform",
-    tools: "Voice AI, Calling Automation, CRM Integrations",
-    image: "/images/callhq.png",
-    link: "https://callhq.ai",
+    title: "Pocket Parliament",
+    category: "Political Simulation Game",
+    tools: "Next.js, Zustand, React Three Fiber",
+    image: "/images/pocket_parliament.png",
+    link: "https://github.com/iammsp-star/pocket-parliament",
   },
   {
-    title: "Whatsapp Automation",
-    category: "WABA Application",
-    tools: "WhatsApp Business API, Workflow Automation, Notifications",
-    image: "/images/whatsapp.png",
-    link: "https://whatsapp.callhq.ai",
-  },
-  {
-    title: "Broki",
-    category: "Real Estate Platform for FnB Industry",
-    tools: "Property Discovery, Lead Management, Marketplace Workflows",
-    image: "/images/broki.png",
-    link: "https://broki.in",
-  },
-  {
-    title: "Orrdr.com",
-    category: "Ecommerce Platform and Mobile App",
-    tools: "Ecommerce, Mobile Experience, Order Management",
-    image: "/images/orrdr.png",
-    link: "https://orrdr.com",
+    title: "PDF to Handwritten",
+    category: "Utility Tool",
+    tools: "Python, Image Processing, ReportLab",
+    image: "/images/pdf_to_handwritten.png",
+    link: "https://github.com/iammsp-star/pdf-to-handwritten",
   },
 ];
 
