@@ -2,7 +2,7 @@
 
 This repository contains the source code for my personal 3D portfolio as a Data Scientist & AI Expert. Built with React, TypeScript, Three.js, React Three Fiber, and GSAP.
 
-Live site: [https://github.com/iammsp-star/3d-portfolio](https://github.com/iammsp-star/3d-portfolio)
+Live site: [https://iammsp-star.github.io/3d-portfolio/](https://iammsp-star.github.io/3d-portfolio/)
 
 ![Portfolio Preview](public/images/preview1.png)
 
