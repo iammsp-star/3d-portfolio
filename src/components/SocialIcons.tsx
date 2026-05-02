@@ -1,8 +1,7 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
+  FaGlobe,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
@@ -77,7 +76,15 @@ const SocialIcons = () => {
             <FaLinkedinIn />
           </a>
         </span>
-
+        <span>
+          <a
+            href="https://iammsp-star.github.io/3d-portfolio/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGlobe />
+          </a>
+        </span>
       </div>
       <a
         className="resume-button"

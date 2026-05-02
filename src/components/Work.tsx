@@ -8,14 +8,14 @@ const projects = [
     title: "Pocket Parliament",
     category: "Political Simulation Game",
     tools: "Next.js, Zustand, React Three Fiber",
-    image: "/images/pocket_parliament.png",
+    image: `${import.meta.env.BASE_URL}images/pocket_parliament.png`,
     link: "https://github.com/iammsp-star/pocket-parliament",
   },
   {
     title: "PDF to Handwritten",
     category: "Utility Tool",
     tools: "Python, Image Processing, ReportLab",
-    image: "/images/pdf_to_handwritten.png",
+    image: `${import.meta.env.BASE_URL}images/pdf_to_handwritten.png`,
     link: "https://github.com/iammsp-star/pdf-to-handwritten",
   },
 ];
