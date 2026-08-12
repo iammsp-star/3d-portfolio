@@ -112,8 +112,49 @@ const projects = [
 ];
 
 const Work = () => {
+  const [projectsList, setProjectsList] = useState<ProjectItem[]>(staticProjects);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/iammsp-star/repos?sort=updated&per_page=100")
+      .then((res) => res.json())
+      .then((repos) => {
+        if (Array.isArray(repos) && repos.length > 0) {
+          const staticMap = new Map<string, ProjectItem>(
+            staticProjects.map((p) => [p.link.toLowerCase(), p])
+          );
+
+          const fetchedList: ProjectItem[] = repos
+            .filter((repo: any) => !repo.fork && repo.name !== "iammsp-star")
+            .map((repo: any) => {
+              const url = repo.html_url.toLowerCase();
+              if (staticMap.has(url)) {
+                return staticMap.get(url)!;
+              }
+              const formattedTitle = repo.name
+                .split(/[-_]/)
+                .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ");
+
+              return {
+                title: formattedTitle,
+                category: repo.description || `${repo.language || "Software"} Project`,
+                tools: [repo.language, ...(repo.topics || [])].filter(Boolean).join(", ") || "GitHub Repository",
+                image: `${import.meta.env.BASE_URL}images/placeholder.webp`,
+                link: repo.html_url,
+              };
+            });
+
+          if (fetchedList.length > 0) {
+            setProjectsList(fetchedList);
+          }
+        }
+      })
+      .catch(() => {
+        // Fallback to staticProjects on API error
+      });
+  }, []);
 
   const goToSlide = useCallback(
     (index: number) => {
@@ -127,15 +168,15 @@ const Work = () => {
 
   const goToPrev = useCallback(() => {
     const newIndex =
-      currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
+      currentIndex === 0 ? projectsList.length - 1 : currentIndex - 1;
     goToSlide(newIndex);
-  }, [currentIndex, goToSlide]);
+  }, [currentIndex, projectsList.length, goToSlide]);
 
   const goToNext = useCallback(() => {
     const newIndex =
-      currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+      currentIndex === projectsList.length - 1 ? 0 : currentIndex + 1;
     goToSlide(newIndex);
-  }, [currentIndex, goToSlide]);
+  }, [currentIndex, projectsList.length, goToSlide]);
 
   return (
     <div className="work-section" id="work">
@@ -171,7 +212,7 @@ const Work = () => {
                 transform: `translateX(-${currentIndex * 100}%)`,
               }}
             >
-              {projects.map((project, index) => (
+              {projectsList.map((project, index) => (
                 <div className="carousel-slide" key={index}>
                   <div className="carousel-content">
                     <div className="carousel-info">
@@ -204,7 +245,7 @@ const Work = () => {
 
           {/* Dot Indicators */}
           <div className="carousel-dots">
-            {projects.map((_, index) => (
+            {projectsList.map((_, index) => (
               <button
                 key={index}
                 className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
@@ -215,6 +256,31 @@ const Work = () => {
               />
             ))}
           </div>
+        </div>
+
+        <div style={{ textAlign: "center", marginTop: "30px" }}>
+          <a
+            href="https://github.com/iammsp-star?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+            className="contact-social"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              fontSize: "0.95rem",
+              letterSpacing: "1px",
+              color: "#dfdfdf",
+              textDecoration: "none",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              padding: "10px 20px",
+              borderRadius: "25px",
+              backdropFilter: "blur(10px)",
+              background: "rgba(255, 255, 255, 0.03)"
+            }}
+          >
+            VIEW ALL REPOSITORIES ON GITHUB <MdArrowOutward />
+          </a>
         </div>
       </div>
     </div>
