@@ -1,6 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
 import "./styles/Work.css";
-import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward, MdArrowOutward } from "react-icons/md";
 
 interface ProjectItem {
@@ -233,17 +232,19 @@ const Work = () => {
                           {project.category}
                         </p>
                         <div className="carousel-tools">
-                          <span className="tools-label">Tools & Features</span>
+                          <span className="tools-label">Tech Stack</span>
                           <p>{project.tools}</p>
                         </div>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="project-repo-link"
+                          data-cursor="disable"
+                        >
+                          View Repository <MdArrowOutward />
+                        </a>
                       </div>
-                    </div>
-                    <div className="carousel-image-wrapper">
-                      <WorkImage
-                        image={project.image}
-                        alt={project.title}
-                        link={project.link}
-                      />
                     </div>
                   </div>
                 </div>
