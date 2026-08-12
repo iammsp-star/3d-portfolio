@@ -11,6 +11,14 @@ const Contact = () => {
             <h4>Connect</h4>
             <p>
               <a
+                href="mailto:manassubhash2007@gmail.com"
+                data-cursor="disable"
+              >
+                Email — manassubhash2007@gmail.com
+              </a>
+            </p>
+            <p>
+              <a
                 href="https://www.linkedin.com/in/manas-puthanpura-5b06b037/"
                 target="_blank"
                 rel="noreferrer"
