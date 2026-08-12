@@ -17,10 +17,6 @@ const About = () => {
             <span className="stat-num">ML & AI</span>
             <span className="stat-label">Core Focus</span>
           </div>
-          <div className="about-stat-item">
-            <span className="stat-num">Stats & Python</span>
-            <span className="stat-label">Tech Foundation</span>
-          </div>
         </div>
       </div>
     </div>
