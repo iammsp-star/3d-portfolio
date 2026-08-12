@@ -19,7 +19,7 @@ const Contact = () => {
             </p>
             <p>
               <a
-                href="https://www.linkedin.com/in/manas-puthanpura-5b06b037/"
+                href="https://www.linkedin.com/in/manas-puthanpura-5b06b0377/"
                 target="_blank"
                 rel="noreferrer"
                 data-cursor="disable"
@@ -44,7 +44,7 @@ const Contact = () => {
               GitHub <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/manas-puthanpura-5b06b037/"
+              href="https://www.linkedin.com/in/manas-puthanpura-5b06b0377/"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
