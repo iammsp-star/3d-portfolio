@@ -11,6 +11,8 @@ interface Props {
 const WorkImage = (props: Props) => {
   const [isVideo, setIsVideo] = useState(false);
   const [video, setVideo] = useState("");
+  const [imgSrc, setImgSrc] = useState(props.image);
+
   const handleMouseEnter = async () => {
     if (props.video) {
       setIsVideo(true);
@@ -36,7 +38,11 @@ const WorkImage = (props: Props) => {
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
+        <img
+          src={imgSrc}
+          alt={props.alt}
+          onError={() => setImgSrc(`${import.meta.env.BASE_URL}images/placeholder.webp`)}
+        />
         {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
       </a>
     </div>
