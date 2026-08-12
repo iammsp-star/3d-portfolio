@@ -1,9 +1,17 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
-import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import { MdArrowBack, MdArrowForward, MdArrowOutward } from "react-icons/md";
 
-const projects = [
+interface ProjectItem {
+  title: string;
+  category: string;
+  tools: string;
+  image: string;
+  link: string;
+}
+
+const staticProjects: ProjectItem[] = [
   {
     title: "Pocket Parliament",
     category: "Political Simulation Game",
